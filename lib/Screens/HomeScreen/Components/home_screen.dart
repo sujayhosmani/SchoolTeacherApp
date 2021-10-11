@@ -4,6 +4,7 @@ import 'package:guardian_teacher/Providers/teacher_provider.dart';
 import 'package:guardian_teacher/Screens/AnnouncementScreen/announcement_main.dart';
 import 'package:guardian_teacher/Screens/AssignmentScren/Components/assignment_main.dart';
 import 'package:guardian_teacher/Screens/AttendanceScreen/Components/attendance_home.dart';
+import 'package:guardian_teacher/Screens/ComingSoonScreen/coming_soon.dart';
 import 'package:guardian_teacher/Screens/HomeScreen/Widgets/grid_main.dart';
 import 'package:guardian_teacher/Screens/TimeTable/time_table_home.dart';
 import 'package:guardian_teacher/Screens/TodayClass/Component/todat_class.dart';
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Home", style: TextStyle(color: Colors.black87),),
         centerTitle: false,
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFD4E7FE),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -48,26 +49,26 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               child: Column(
                 children: [
-                  Container(
-                    alignment: Alignment.centerRight,
-                    child: RichText(
-                      text: TextSpan(
-                          text: "Wed",
-                          style: TextStyle(
-                              color: Color(0XFF263064),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w900),
-                          children: [
-                            TextSpan(
-                              text: " 10 Oct",
-                              style: TextStyle(
-                                  color: Color(0XFF263064),
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.normal),
-                            )
-                          ]),
-                    ),
-                  ),
+                  // Container(
+                  //   alignment: Alignment.centerRight,
+                  //   child: RichText(
+                  //     text: TextSpan(
+                  //         text: "Wed",
+                  //         style: TextStyle(
+                  //             color: Color(0XFF263064),
+                  //             fontSize: 12,
+                  //             fontWeight: FontWeight.w900),
+                  //         children: [
+                  //           TextSpan(
+                  //             text: " 10 Oct",
+                  //             style: TextStyle(
+                  //                 color: Color(0XFF263064),
+                  //                 fontSize: 12,
+                  //                 fontWeight: FontWeight.normal),
+                  //           )
+                  //         ]),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 15,
                   ),
@@ -171,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
           return AnnouncementHome();
         }
         default:{
-          return TodayClassScreen();
+          return ComingSoonScreen();
         }
       }
     }));

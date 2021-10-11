@@ -24,7 +24,7 @@ void main() async{
   if (_result) {
     _defaultHome = new NavScreen();
   }
-  runApp(MyApp(home: _defaultHome,));
+  runApp(MyApp(home: NavScreen(),));
 }
 
 class MyApp extends StatelessWidget {
